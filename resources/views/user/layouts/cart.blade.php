@@ -23,7 +23,7 @@
                             <tr id="order_{{ $order->id_order }}">
                                 <td class="text-center">{{ $order->id_order }}</td>
                                 <td class="text-center">{{ $order->product->name_product }}</td>
-                                <td class="text-center">{{ \Carbon\Carbon::parse($order->order_date)->locale('id')->isoFormat('D MMMM YYYY') }}</td>                                <td class="text-center">{{ $order->duration }}</td>
+                                <td class="text-center">{{ \Carbon\Carbon::parse($order->order_date)->locale('id')->isoFormat('D MMMM YYYY') }}</td>`                                <td class="text-center">{{ $order->duration }}</td>
                                 <td class="text-center">Rp. {{ number_format($order->total_payment, 0, ',', '.') }}</td>
                                 <td class="text-center">
                                     <div id="payment_status_{{ $order->id_order }}">
